@@ -1,0 +1,7 @@
+.pets-sec{
+    background: url("../../assets/images/pets-bg.png") no-repeat right;
+    background-size: contain;
+}
+.pets-sec .bg{
+    background: url("../../assets/images/pets.png") no-repeat right bottom;
+}

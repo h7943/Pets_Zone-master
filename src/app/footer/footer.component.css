@@ -1,0 +1,24 @@
+footer {
+  background: url(../../assets/images/footer-bg.png);
+}
+footer figure img {
+  height: 100%;
+  width: 150px;
+  object-fit: contain;
+}
+
+.footer-title {
+  margin: 0;
+  color: #393d72;
+  font-weight: bold;
+}
+
+footer .copy {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+footer .copy p a {
+  color: #ff4880;
+}
+footer * a:hover {
+  color: #ff4880;
+}

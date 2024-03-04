@@ -1,0 +1,55 @@
+<app-inner-header></app-inner-header>
+<section class="pet-form p-sm-5 p-4">
+    <div *ngIf="successMessage" class="alert alert-success mt-3">
+        {{ successMessage }}
+      </div>
+    <form enctype="multipart/form-data">
+        <div class="row m-0">
+            <div class="col-md-6">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="name" id="name" [(ngModel)]="animalFormData.name" name="name">
+                    <label for="name">Name</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Age" id="age" [(ngModel)]="animalFormData.age" name="age">
+                    <label for="age">Age</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Animal Type" id="animelType" [(ngModel)]="animalFormData.animel_type" name="animel_type">
+                    <label for="animel_type">Animal Type</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Gender" id="gender" [(ngModel)]="animalFormData.gender" name="gender">
+                    <label for="gender">Gender</label>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Address" id="address" [(ngModel)]="animalFormData.location" name="location">
+                    <label for="location">Address</label>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" placeholder="More Info" id="message" [(ngModel)]="animalFormData.disc" name="disc"></textarea>
+                    <label for="disc">More Info</label>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <label for="image">Upload a pet photo</label>
+                <input type="file" id="image" class="form-control mt-2" name="image"   (change)="onFileSelected($event) " 
+                />
+            </div>
+            <div class="col-12">
+                <button class="btn mt-4" type="submit" (click)="onSubmit()">Add Pet</button>
+              </div>
+
+        </div>
+    </form>
+</section>
